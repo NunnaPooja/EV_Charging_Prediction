@@ -8,4 +8,16 @@ Smart charging systems can reduce the stress on the power grid from electric veh
 
 ## Installation
 The code has been tested with Python 3.12.3.
-```pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
+## Data
+The openly accessible dataset from the Electric Nation Project is available at https://www.nationalgrid.co.uk/electric-nation-data. Specifically, the [Crowd Charge Transactions]https://www.nationalgrid.co.uk/downloads-view/81646 and [Charger Install]https://www.nationalgrid.co.uk/downloads-view/81655 files need to be downloaded and placed in ./data/electric_nation_data.
+
+## Usage
+Adapt config.py for desired experiment:
+```
+CONSUMPTION = True | False
+DAY = "" | "-nextday" | "-sameday"
+```
+Run regression.py to train and test models. Run evaluation.py to generate plots.
